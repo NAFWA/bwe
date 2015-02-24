@@ -33,4 +33,4 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(wildcard $(INCDIR)/*.h) Makefile
 	$(CXX) $(CXXFLAGS) $< -c -o $@
 
 run:
-	swc-launch -t /dev/tty3 ~/code/swc/example/wm &> log.out
+	swc-launch -t /dev/tty3 ./bwe &> log.out
