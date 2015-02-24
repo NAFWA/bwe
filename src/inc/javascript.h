@@ -2,9 +2,13 @@
 #define JAVASCRIPT_H
 
 #ifdef __cplusplus
-extern "C" 
+extern "C" {
 #endif
 
-int out(void);
+int initialize_javascript(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* JAVASCRIPT_H */

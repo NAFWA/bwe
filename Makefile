@@ -16,6 +16,8 @@ COBJS=$(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(CSRCS))
 CXXSRCS=$(wildcard $(SRCDIR)/*.cpp)
 CXXOBJS=$(patsubst $(SRCDIR)/%.cpp,$(OBJDIR)/%.o,$(CXXSRCS))
 
+.PHONY: all clean
+
 all: bwe
 
 bwe: $(COBJS) $(CXXOBJS)
@@ -34,3 +36,6 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(wildcard $(INCDIR)/*.h) Makefile
 
 run:
 	swc-launch -t /dev/tty3 ./bwe &> log.out
+
+clean:
+	rm -rf objs/ bwe

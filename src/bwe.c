@@ -249,7 +249,9 @@ static void quit(void * data, uint32_t time, uint32_t value, uint32_t state)
 int main(int argc, char * argv[])
 {
   /* Quick test to see if v8 stuff works. */
-  printf("%d\n",out());
+  printf("init: %d\n",initialize_javascript());
+
+  return 0;
 
   display = wl_display_create();
 
